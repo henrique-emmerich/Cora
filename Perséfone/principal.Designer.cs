@@ -28,40 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Nó2");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Nó3");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Nó4");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Nó5");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Nó6");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Nó7");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Nó8");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Nó9");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("OLT-1", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Nó10");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Nó11");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Nó12");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Nó13");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Nó14");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Nó15");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Nó16");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Nó17");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("OLT-2", new System.Windows.Forms.TreeNode[] {
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14,
-            treeNode15,
-            treeNode16,
-            treeNode17});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,7 +77,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -210,45 +175,6 @@
             this.treeV_olts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeV_olts.Location = new System.Drawing.Point(0, 0);
             this.treeV_olts.Name = "treeV_olts";
-            treeNode1.Name = "Nó2";
-            treeNode1.Text = "Nó2";
-            treeNode2.Name = "Nó3";
-            treeNode2.Text = "Nó3";
-            treeNode3.Name = "Nó4";
-            treeNode3.Text = "Nó4";
-            treeNode4.Name = "Nó5";
-            treeNode4.Text = "Nó5";
-            treeNode5.Name = "Nó6";
-            treeNode5.Text = "Nó6";
-            treeNode6.Name = "Nó7";
-            treeNode6.Text = "Nó7";
-            treeNode7.Name = "Nó8";
-            treeNode7.Text = "Nó8";
-            treeNode8.Name = "Nó9";
-            treeNode8.Text = "Nó9";
-            treeNode9.Name = "OLT-1";
-            treeNode9.Text = "OLT-1";
-            treeNode10.Name = "Nó10";
-            treeNode10.Text = "Nó10";
-            treeNode11.Name = "Nó11";
-            treeNode11.Text = "Nó11";
-            treeNode12.Name = "Nó12";
-            treeNode12.Text = "Nó12";
-            treeNode13.Name = "Nó13";
-            treeNode13.Text = "Nó13";
-            treeNode14.Name = "Nó14";
-            treeNode14.Text = "Nó14";
-            treeNode15.Name = "Nó15";
-            treeNode15.Text = "Nó15";
-            treeNode16.Name = "Nó16";
-            treeNode16.Text = "Nó16";
-            treeNode17.Name = "Nó17";
-            treeNode17.Text = "Nó17";
-            treeNode18.Name = "OLT-2";
-            treeNode18.Text = "OLT-2";
-            this.treeV_olts.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode18});
             this.treeV_olts.Size = new System.Drawing.Size(161, 556);
             this.treeV_olts.TabIndex = 0;
             this.treeV_olts.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1_AfterSelect);
@@ -263,7 +189,6 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.lbl_olt1_modelo);
             this.splitContainer2.Panel1.Controls.Add(this.label13);
             this.splitContainer2.Panel1.Controls.Add(this.lbl_olt1_sumary);
@@ -654,15 +579,6 @@
             this.textBox1.Size = new System.Drawing.Size(759, 111);
             this.textBox1.TabIndex = 22;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(294, 122);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -748,6 +664,5 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
     }
 }

@@ -10,3 +10,15 @@ C:\Users\henrique.emmerich\source\repos\Perséfone\Perséfone\bin\Debug\Perséfo
 C:\Users\henrique.emmerich\source\repos\Perséfone\Perséfone\obj\Debug\Perséfone.exe
 C:\Users\henrique.emmerich\source\repos\Perséfone\Perséfone\obj\Debug\Perséfone.pdb
 C:\Users\henrique.emmerich\source\repos\Perséfone\Perséfone\obj\Debug\Perséfone.allonuview.resources
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\bin\Debug\Perséfone.exe.config
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\bin\Debug\Perséfone.exe
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\bin\Debug\Perséfone.pdb
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\obj\Debug\Perséfone.csprojAssemblyReference.cache
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\obj\Debug\Perséfone.allonuview.resources
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\obj\Debug\Perséfone.Form1.resources
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\obj\Debug\Perséfone.principal.resources
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\obj\Debug\Perséfone.Properties.Resources.resources
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\obj\Debug\Perséfone.csproj.GenerateResource.cache
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\obj\Debug\Perséfone.csproj.CoreCompileInputs.cache
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\obj\Debug\Perséfone.exe
+C:\Users\henrique.emmerich\Source\Repos\Persefone\Perséfone\obj\Debug\Perséfone.pdb

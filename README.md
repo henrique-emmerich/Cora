@@ -1,5 +1,7 @@
 # Persefone
 Projeto Perséfone
-  Integração com OLT Datacom...
-Visualização das ONUS no Geral e por OLT
-com relatório de Sinal das onus.. status up/down e pendentes de provisionamento...
+Desenvolvido em C# a ideia começa com um sistema de visualização de onus, relatório de sinais, status das onus
+
+Planos futuros para uma versão totalmente full.
+Servidor em linux para armazenamento de dados coletados..
+programas clientes operariam consultando a base de dados

@@ -12,7 +12,7 @@ namespace Perséfone
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            
+            //chama o Form principal e fecha o form atual
             principal fprincipal = new principal();
             fprincipal.ShowDialog();
             this.Close();

@@ -24,10 +24,7 @@ namespace Perséfone
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            Form1 flogin = new Form1();
-            flogin.Close();
-
-            statusStrip1.Items.
+            
         }
 
         private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)

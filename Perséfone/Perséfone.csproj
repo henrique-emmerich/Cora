@@ -51,6 +51,7 @@
     <Compile Include="allonuview.Designer.cs">
       <DependentUpon>allonuview.cs</DependentUpon>
     </Compile>
+    <Compile Include="dtc.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

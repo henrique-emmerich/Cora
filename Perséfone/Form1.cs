@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Perséfone
@@ -18,10 +11,18 @@ namespace Perséfone
         }
 
         private void Button1_Click(object sender, EventArgs e)
-        { 
-            principal fprincipal = new principal();
-            fprincipal.Show();
+        {
             
+            principal fprincipal = new principal();
+            fprincipal.ShowDialog();
+            this.Close();
+
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            _ = txtuser.Focus();
         }
     }
 }

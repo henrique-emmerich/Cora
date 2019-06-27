@@ -8,6 +8,16 @@ namespace Perséfone
 {
     class dtc
     {
+        public void sshopen()
+        {
+            //abre a seção ssh
+        }
+
+        public void sshclose()
+        {
+            //fecha a seção ssh
+
+        }
 
     }
 }

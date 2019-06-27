@@ -304,6 +304,7 @@
             this.btn_olt1_all_onu.TabIndex = 14;
             this.btn_olt1_all_onu.Text = "Listar ONUs";
             this.btn_olt1_all_onu.UseVisualStyleBackColor = true;
+            this.btn_olt1_all_onu.Click += new System.EventHandler(this.Btn_olt1_all_onu_Click);
             // 
             // lbl_olt1_total
             // 
@@ -476,6 +477,7 @@
             this.btn_olt2_all_onu.TabIndex = 33;
             this.btn_olt2_all_onu.Text = "Listar ONUs";
             this.btn_olt2_all_onu.UseVisualStyleBackColor = true;
+            this.btn_olt2_all_onu.Click += new System.EventHandler(this.Btn_olt2_all_onu_Click);
             // 
             // lbl_olt2_total
             // 
@@ -572,7 +574,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(3, 156);
+            this.textBox1.Location = new System.Drawing.Point(3, 155);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;

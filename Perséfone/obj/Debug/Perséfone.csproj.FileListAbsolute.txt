@@ -26,7 +26,6 @@ D:\git\Perséfone\bin\Debug\Perséfone.exe.config
 D:\git\Perséfone\bin\Debug\Perséfone.exe
 D:\git\Perséfone\bin\Debug\Perséfone.pdb
 D:\git\Perséfone\obj\Debug\Perséfone.csprojAssemblyReference.cache
-D:\git\Perséfone\obj\Debug\Perséfone.allonuview.resources
 D:\git\Perséfone\obj\Debug\Perséfone.Form1.resources
 D:\git\Perséfone\obj\Debug\Perséfone.principal.resources
 D:\git\Perséfone\obj\Debug\Perséfone.Properties.Resources.resources
@@ -34,3 +33,4 @@ D:\git\Perséfone\obj\Debug\Perséfone.csproj.GenerateResource.cache
 D:\git\Perséfone\obj\Debug\Perséfone.csproj.CoreCompileInputs.cache
 D:\git\Perséfone\obj\Debug\Perséfone.exe
 D:\git\Perséfone\obj\Debug\Perséfone.pdb
+D:\git\Perséfone\obj\Debug\Perséfone.onuview.resources

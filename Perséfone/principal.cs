@@ -34,7 +34,25 @@ namespace Perséfone
 
         private void VisualizaçãoDeONUSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            allonuview allonu = new allonuview();
+            //todas as visualizações usam o mesmo Form
+            //chama o form de visualização de ONUs
+            onuview allonu = new onuview();
+            allonu.Show();
+        }
+
+        private void Btn_olt1_all_onu_Click(object sender, EventArgs e)
+        {
+            //todas as visualizações usam o mesmo Form
+            //chama o form de visualização de ONUs
+            onuview allonu = new onuview();
+            allonu.Show();
+        }
+
+        private void Btn_olt2_all_onu_Click(object sender, EventArgs e)
+        {
+            //todas as visualizações usam o mesmo Form
+            //chama o form de visualização de ONUs
+            onuview allonu = new onuview();
             allonu.Show();
         }
     }

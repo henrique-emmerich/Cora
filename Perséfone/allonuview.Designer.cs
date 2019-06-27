@@ -1,6 +1,6 @@
 ﻿namespace Perséfone
 {
-    partial class allonuview
+    partial class onuview
     {
         /// <summary>
         /// Required designer variable.
@@ -55,14 +55,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(895, 401);
             this.dataGridView1.TabIndex = 1;
             // 
-            // allonuview
+            // onuview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 523);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.statusStrip1);
-            this.Name = "allonuview";
+            this.Name = "onuview";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perséfone - Todas ONUs";

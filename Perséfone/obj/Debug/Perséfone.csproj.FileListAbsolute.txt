@@ -34,3 +34,6 @@ D:\git\Perséfone\obj\Debug\Perséfone.csproj.CoreCompileInputs.cache
 D:\git\Perséfone\obj\Debug\Perséfone.exe
 D:\git\Perséfone\obj\Debug\Perséfone.pdb
 D:\git\Perséfone\obj\Debug\Perséfone.onuview.resources
+D:\git\Perséfone\bin\Debug\Renci.SshNet.dll
+D:\git\Perséfone\bin\Debug\Renci.SshNet.xml
+D:\git\Perséfone\obj\Debug\Perséfone.csproj.CopyComplete

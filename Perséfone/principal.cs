@@ -14,9 +14,10 @@ namespace Perséfone
     public partial class principal : Form
     {
         //Variáveis declaradas para uso em toda classe
-
+        
         dtc datacom = new dtc();
-
+        onusstatus onustatus = new onusstatus();
+        
         public principal()
         {
             InitializeComponent();
@@ -31,10 +32,17 @@ namespace Perséfone
         private void Principal_Load(object sender, EventArgs e)
         {
             //carrega os dados da olt1
-            datacom.sshopen("10.255.93.11", "22", "admin", "D#2115kpq");
-            lbl_olt1_modelo.Text = datacom.modelo();
-            lbl_olt1_fw.Text = datacom.fw();
-            lbl_olt1_name.Text = datacom.hostname();
+            // datacom.sshopen("10.255.93.11", "22", "admin", "D#2115kpq");
+            // lbl_olt1_modelo.Text = datacom.modelo();
+            // lbl_olt1_fw.Text = datacom.fw();
+            // lbl_olt1_name.Text = datacom.hostname();
+            onustatus.onuup = 14; 
+            MessageBox.Show(onustatus.onuup.ToString());
+            datacom.onus();
+            lbl_olt1_down.Text = onustatus.onudown.ToString();
+            lbl_olt1_up.Text = onustatus.onuup.ToString();
+            lbl_olt1_total.Text = onustatus.onutotal.ToString();
+
 
         }
 
@@ -55,10 +63,6 @@ namespace Perséfone
 
         private void Btn_olt1_all_onu_Click(object sender, EventArgs e)
         {
-            
-            
-            
-            
             //todas as visualizações usam o mesmo Form
             //chama o form de visualização de ONUs
             // ATIVAR NO FINAL DOS TESTES

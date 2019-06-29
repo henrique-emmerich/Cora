@@ -28,15 +28,33 @@ namespace Perséfone
             if (cssh.IsConnected) { cssh.Disconnect();}
         }
 
-        public string sshfw()
+        public string fw()
         {
-            
             SshCommand dtccmd = cssh.RunCommand("show platform");
-            string sshretorno = dtccmd.Result;
-            MessageBox.Show(sshretorno);
-            string fw, modelo;
-            sshclose();
+            string sshretorno = dtccmd.Result.Substring(278,9);
+
             return sshretorno;
+            sshclose();
+        }
+        public string modelo()
+        {
+            SshCommand dtccmd = cssh.RunCommand("show platform");
+            string sshretorno = dtccmd.Result.Substring(167,6);
+            return sshretorno;
+            sshclose();
+        }
+        public string alarm()
+        {
+            SshCommand dtccmd = cssh.RunCommand("show alarm");
+            string alarme = dtccmd.Result;
+            return alarme;
+
+        }
+        public string hostname()
+        {
+            SshCommand dtccmd = cssh.RunCommand("config"+"\n"+"show hostname");
+            string name = dtccmd.Result.Substring(9,12);
+            return name;
         }
 
     }

@@ -9,18 +9,11 @@ using Renci.SshNet;
 
 namespace Perséfone
 {
-
-    public class onusstatus
-    {
-        //classe poco para armazenar onus UP, Down e total
-        public Int32 onuup { get; set; }
-        public Int32 onudown { get; set; }
-        public Int32 onutotal { get; set; }
-    }
-
     class dtc
     {
         SshClient cssh;
+
+        //statusonu onusstatu
 
         public void sshopen(string ip, string porta, string user, string senha)
         {
@@ -63,15 +56,20 @@ namespace Perséfone
             return name;
         }
 
-        public onusstatus onus()
-        {
-            return new onusstatus() { onudown = 34, onutotal = 23, onuup = 45 };
-        }
-
-        //public (int inteiro, string texto) dtconu()
+        //public statusonu onus()
         //{
-        //   return (1, "two");
+        //    return new statusonu() { onudown = 34, onutotal = 23, onuup = 45 };
         //}
+
+        public int[] onus()
+        {
+            //tentando retornar um array na função
+            int onuup = 14;
+            int onudown = 15;
+            int onutotal = onuup + onudown;
+            int[] onustatus= { onuup, onudown,onutotal };
+           return onustatus[];
+        }
 
 
         //fim da classe dtc

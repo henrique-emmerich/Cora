@@ -16,7 +16,7 @@ namespace Perséfone
         //Variáveis declaradas para uso em toda classe
         
         dtc datacom = new dtc();
-        onusstatus onustatus = new onusstatus();
+        statusonu onustatus = new statusonu();
         
         public principal()
         {
@@ -36,7 +36,7 @@ namespace Perséfone
             // lbl_olt1_modelo.Text = datacom.modelo();
             // lbl_olt1_fw.Text = datacom.fw();
             // lbl_olt1_name.Text = datacom.hostname();
-            onustatus.onuup = 14; 
+            
             MessageBox.Show(onustatus.onuup.ToString());
             datacom.onus();
             lbl_olt1_down.Text = onustatus.onudown.ToString();

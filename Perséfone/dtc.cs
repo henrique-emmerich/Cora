@@ -56,19 +56,42 @@ namespace Perséfone
             return name;
         }
 
-        //public statusonu onus()
-        //{
-        //    return new statusonu() { onudown = 34, onutotal = 23, onuup = 45 };
-        //}
-
-        public int[] onus()
+        public string[,] onus()
         {
-            //tentando retornar um array na função
-            int onuup = 14;
-            int onudown = 15;
-            int onutotal = onuup + onudown;
-            int[] onustatus= { onuup, onudown,onutotal };
-           return onustatus[];
+            SshCommand dtccmd = cssh.RunCommand("show interface gpon onu");
+            string sshresult= dtccmd.Result;                 // atribui o retorno a uma string simples
+            sshresult = sshresult.Remove(0, 208);            // remove do retorno o cabeçalho
+            sshresult= sshresult.Remove(sshresult.Length-1); // remove do retorno a ultima linha
+            string[] onuresults = sshresult.Split('\n');     // divide o retorno em cada quebra de linha
+
+            string[,] onustatus= new string[onuresults.Length,4];   //Matriz que armazenara e retornará  as infos das onus 
+            
+            //a matriz vai ter apenas 4 colunas...
+            //PON - ID - serial - descrição
+
+            //percorre cada linha da string e armazena nas respectivas linhas
+            for (int l = 0;l<=onuresults.Length;l++) //for que percorre as linhas
+            {
+                onustatus[l, 0] = onuresults[l].Substring(4, 1);    //recorta a pon
+                onustatus[l, 1] = onuresults[l].Substring(10, 1);   //recorta o id
+                onustatus[l, 2] = onuresults[l].Substring(19, 12);  //recorta o serial
+                onustatus[l, 3] = onuresults[l].Substring(68);      //recorta o description
+            }
+            
+
+
+
+
+
+
+
+
+
+            //retornando um array inteiro...
+            //proximo passo retornar uma matriz...
+            //converter toda a tabela trazida pelo
+           
+            return onustatus;
         }
 
 

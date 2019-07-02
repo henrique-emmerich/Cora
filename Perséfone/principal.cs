@@ -37,8 +37,10 @@ namespace Perséfone
             // lbl_olt1_fw.Text = datacom.fw();
             // lbl_olt1_name.Text = datacom.hostname();
             
-            MessageBox.Show(onustatus.onuup.ToString());
-            datacom.onus();
+
+            int[] teste = datacom.onus();
+            MessageBox.Show(teste[1].ToString()) ;
+
             lbl_olt1_down.Text = onustatus.onudown.ToString();
             lbl_olt1_up.Text = onustatus.onuup.ToString();
             lbl_olt1_total.Text = onustatus.onutotal.ToString();

@@ -32,18 +32,21 @@ namespace Perséfone
         private void Principal_Load(object sender, EventArgs e)
         {
             //carrega os dados da olt1
-            // datacom.sshopen("10.255.93.11", "22", "admin", "D#2115kpq");
-            // lbl_olt1_modelo.Text = datacom.modelo();
-            // lbl_olt1_fw.Text = datacom.fw();
-            // lbl_olt1_name.Text = datacom.hostname();
+             datacom.sshopen("10.255.93.11", "22", "admin", "D#2115kpq");
+            int[] contagemonu = datacom.statusonu(); //Array para armazenar as infos de quantas onus em cada estado
+            datacom.rastreio();
+
+
+            //Carrega os dados da OLT 1 na formLoad
+            lbl_olt1_up.Text = contagemonu[0].ToString();
+            lbl_olt1_down.Text = contagemonu[1].ToString();
+            lbl_olt1_total.Text = contagemonu[2].ToString();
+            lbl_olt1_modelo.Text = datacom.modelo();
+            lbl_olt1_fw.Text = datacom.fw();
+            lbl_olt1_name.Text = datacom.hostname();
             
 
-            int[] teste = datacom.onus();
-            MessageBox.Show(teste[1].ToString()) ;
-
-            lbl_olt1_down.Text = onustatus.onudown.ToString();
-            lbl_olt1_up.Text = onustatus.onuup.ToString();
-            lbl_olt1_total.Text = onustatus.onutotal.ToString();
+           
 
 
         }

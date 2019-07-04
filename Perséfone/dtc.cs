@@ -42,21 +42,21 @@ namespace Perséfone
             return sshretorno;
             sshclose();
         }
-        public string alarm()
-        {
-            SshCommand dtccmd = cssh.RunCommand("show alarm");
-            string alarme = dtccmd.Result;
-            return alarme;
+        //public string alarm()
+        //{
+        //    //SshCommand dtccmd = cssh.RunCommand("show alarm");
+        //    //string alarme = dtccmd.Result;
+        //    //string[] alarm = alarme.Split('\n');
+        //    //return alarm;
 
-        }
+        //}
         public string hostname()
         {
             SshCommand dtccmd = cssh.RunCommand("config" + "\n" + "show hostname");
             string name = dtccmd.Result.Substring(9, 12);
             return name;
         }
-
-        public string[,] onus()
+        public string[,] Onus()
         {
             SshCommand dtccmd = cssh.RunCommand("show interface gpon onu");
             string sshresult= dtccmd.Result;                 // atribui o retorno a uma string simples
@@ -64,36 +64,60 @@ namespace Perséfone
             sshresult= sshresult.Remove(sshresult.Length-1); // remove do retorno a ultima linha
             string[] onuresults = sshresult.Split('\n');     // divide o retorno em cada quebra de linha
 
-            string[,] onustatus= new string[onuresults.Length,4];   //Matriz que armazenara e retornará  as infos das onus 
+            string[,] onustatus= new string[onuresults.Length,5];   //Matriz que armazenara e retornará  as infos das onus 
             
             //a matriz vai ter apenas 4 colunas...
             //PON - ID - serial - descrição
 
             //percorre cada linha da string e armazena nas respectivas linhas
-            for (int l = 0;l<=onuresults.Length;l++) //for que percorre as linhas
+            for (int l = 0;l<onuresults.Length;l++) //for que percorre as linhas
             {
                 onustatus[l, 0] = onuresults[l].Substring(4, 1);    //recorta a pon
-                onustatus[l, 1] = onuresults[l].Substring(10, 1);   //recorta o id
-                onustatus[l, 2] = onuresults[l].Substring(19, 12);  //recorta o serial
+                onustatus[l, 1] = onuresults[l].Substring(10, 3);   //recorta o id
+                onustatus[l, 2] = onuresults[l].Substring(19, 12);  //recorta o serial 35
                 onustatus[l, 3] = onuresults[l].Substring(68);      //recorta o description
+                onustatus[l, 4] = onuresults[l].Substring(35, 4);   //pega o status da onu se esta up ou down
+
+                onustatus[l, 1] = onustatus[l, 1].Trim();//remove o espaço vazio no final do ID (quando o id for tipo: 1)
+                onustatus[l, 3] = onustatus[l, 3].Trim(); //remove o espaço vazio no final da onu
+                onustatus[l, 4] = onustatus[l, 4].Trim(); //se o status for Up... remove o espaço vazio no final
+
             }
-            
-
-
-
-
-
-
-
-
-
             //retornando um array inteiro...
             //proximo passo retornar uma matriz...
             //converter toda a tabela trazida pelo
            
             return onustatus;
         }
+        public int[] statusonu()
+        {
+            string[,] ONU = Onus();
+            //int x= ONU.Length;
+            int[] onuupdown = {1,1,1};
 
+            for (int l = 0; l<ONU.GetLength(0); l++) //for que percorre as linhas
+            {
+                if (ONU[l, 4] == "Up") { onuupdown[0] += 1; }
+                else if(ONU[l, 4] == "Down") { onuupdown[1] += 1; }
+            }
+
+            onuupdown[2] = onuupdown[0] + onuupdown[1];
+
+
+            return onuupdown;
+        }
+        public string[] rastreio()
+        {
+            SshCommand dtccmd = cssh.RunCommand("show interface gpon discovered-onus");
+            string sshresult = dtccmd.Result;
+            string[] rastreio= {"eret","dfd"};
+
+
+            if (sshresult== "% No entries found.") { }
+            else { MessageBox.Show(sshresult); }
+            return rastreio;
+
+        }
 
         //fim da classe dtc
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Henrique Emmerich
+
+using System;
 using System.Windows.Forms;
 
 namespace Perséfone
